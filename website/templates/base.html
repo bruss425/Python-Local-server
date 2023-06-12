@@ -18,7 +18,7 @@
     <title>{% block title %}Home{% endblock %}</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f73d0f;">
       <button
         class="navbar-toggler"
         type="button"
@@ -38,6 +38,9 @@
           {% endif %}
         </div>
       </div>
+      <h3 class="text-dark" class="font-weight-bold"  class="navbar-text"  >
+       DegenBet.ag
+      </h3>
     </nav>
 
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
@@ -89,3 +92,12 @@
 {% endblock %}
   </body>
 </html>
+
+
+ <!--
+
+   <span class="navbar-text" class="display-3" >
+  WeBet.ag
+ </span> 
+
+-->

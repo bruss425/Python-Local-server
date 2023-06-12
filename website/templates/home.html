@@ -1,6 +1,11 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
   %}
-  <h1 align="center">Notes</h1>
+  <h4 class= "align-text-bottom">
+    <span class="badge badge-dark">
+        Current Balance: $100.00
+    </span>
+  </h4>
+  <h1 class = "text-center">Notes to add</h1>
   <ul class="list-group list-group-flush" id="notes">
     {% for note in user.notes %}
     <li class="list-group-item">
@@ -14,7 +19,7 @@
   <form method="POST">
     <textarea name="note" id="note" class="form-control"></textarea>
     <br />
-    <div align="center">
+    <div class = "text-center">
       <button type="submit" class="btn btn-primary">Add Note</button>
     </div>
   </form>
