@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}Account{% endblock %} {% block content
+    %}
+    <h4 class= "align-text-bottom">
+        <span class="badge badge-dark">
+            Current Balance: ${{balance}}.00
+        </span>
+      </h4>
+    <form method="POST">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Change your account balance
+        </button>
+        <br />
+        <div class="collapse" id="collapseExample">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">$</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"  name="balance" id="balance">
+                <div class="input-group-append">
+                  <span class="input-group-text">.00</span>
+                </div>
+              </div>
+        </div>
+    {% endblock %}

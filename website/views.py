@@ -35,3 +35,14 @@ def delete_note():
             db.session.commit()
 
     return jsonify({})
+
+@views.route('/account', methods=['GET', 'POST'])
+@login_required
+def account():
+    balance = "0"
+    if request.method == 'POST': 
+        output = (request.form.get('balance'))
+        flash('Your account balance has been changed.', category='success')
+        balance = output
+
+    return render_template("account.html", user=current_user, balance = balance)
